@@ -123,6 +123,18 @@ MiscSection:NewButton("Infinite Jump", "Allows you to jump in the air", function
     end)
 end)
 
+local CreditsTab = Window:NewTab("Credits")
+
+local CreditsSection = CreditsTab:NewSection("Credits")
+
+CreditsSection:NewButton("SamhithWasTaken#1874", "Sets my discord username to your clipboard", function()
+    setclipboard(tostring("SamhithWasTaken#1874"))
+end)
+
+CreditsSection:NewButton("Discord Server", "Sets our discord server to your clipboard", function()
+    setclipboard(tostring("https://discord.gg/QbzbZmbZmC"))
+end)
+
 
 
 
