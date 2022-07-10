@@ -117,6 +117,16 @@ MainSection:NewButton("Autofarm V2", "A better version of tweenservice autofarms
     end --// ends the whole module but not the one below
 end)
 
+MiscSection:NewButton("Infinite Jump", "Allows you to jump in the air", function()
+    game:GetService("UserInputService").JumpRequest:connect(function()
+            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+    end)
+end)
+
+
+
+
+
 
 
 
