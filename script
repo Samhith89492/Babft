@@ -134,6 +134,38 @@ CreditsSection:NewButton("Discord Server", "Sets our discord server to your clip
     setclipboard(tostring("https://discord.gg/QbzbZmbZmC"))
 end)
 
+function V3()     
+    game.workspace.Gravity = 0
+       game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(-58.0943985, 28.0940971, 1819.20801) 
+       tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(2.500, Enum.EasingStyle.Linear)
+       tween =
+           tweenService:Create(
+           game:GetService("Players")["LocalPlayer"].Character:WaitForChild("HumanoidRootPart"), 
+           tweenInfo,
+           {CFrame = CFrame.new(-60.5737877, 53.9498825, 8666.35059)}
+       )
+       tween:Play() 
+       wait(1.500) 
+       tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(0, Enum.EasingStyle.Linear) 
+       tween =
+           tweenService:Create(
+           game:GetService("Players")["LocalPlayer"].Character:WaitForChild("HumanoidRootPart"), 
+           tweenInfo,
+           {CFrame = CFrame.new(-55.5486526, -360.063782, 9489.0498)} 
+       )
+       tween:Play() 
+       game.workspace.Gravity = 196.2
+   wait(15)
+end
+
+MiscSection:NewButton("Gold Block Farm", "Farms gold blocks for you", function(v)
+    repeat
+        V3()
+    until v == false
+end)
+
+
+
 
 
 
